@@ -1,4 +1,4 @@
-package com.rabi.multithread.executorservice.blockingQueue;
+package com.rabi.multithread.executorservice.blockingQueue.single;
 
 import java.util.concurrent.BlockingQueue;
 
@@ -12,19 +12,19 @@ public class Producer
 	}
 	@Override
 	public void run() {
-		while(true) {
+		//while(true) {
 		try {
 			process();
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
-		} 
+		//} 
 	  }
 		
 	}
 	private void process() throws InterruptedException {
 		
 		// Put 20 ints into Queue
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
 		q.put(i);
 		System.out.println("[Producer] Put : " + i);
 		Thread.sleep(1000);
