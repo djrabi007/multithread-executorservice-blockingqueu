@@ -26,7 +26,7 @@ public class InterviewProcessorConsumer
 		System.out.println(" Intervew completed for [Consumer] Take : " + take);
 		Thread.sleep(1000);
 		}
-		System.out.println();
+		System.out.println("Interview completed for all candidate");
 	}
 }
 

@@ -1,5 +1,6 @@
 package com.rabi.multithread.executorservice.blockingQueue.interview;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,7 +9,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class InterThread {
 
 	public static void main(String[] args) {
-		BlockingQueue<String> q=new LinkedBlockingQueue<>(3);
+	//	BlockingQueue<String> q=new LinkedBlockingQueue<>(20);
+		BlockingQueue<String> q=new ArrayBlockingQueue<>(3);
 		invokeByNormalThread(q); 
 		
 		//invokeByExecutor(q);
